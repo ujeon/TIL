@@ -1,0 +1,37 @@
+## Association
+
+<br>
+
+### Association이란?
+
+Association의 사전적 의미는
+
+> 	1. 협회
+>  	2. 연계, 유대, 제휴
+>  	3. 연관, 연상
+
+와 같은 의미를 가지고 있다. Sequelize 에서의 association은 각 모델 간의 관계를 의미한다. Sequelize에서 association의 종류는 다음과 같이 네가지 종류가 있다.
+
+> 	1. BelongTo
+>  	2. HasOne
+>  	3. HasMany
+>  	4. BelongToMany
+
+<br>
+
+### 기본 개념
+
+Sequelize 공식 문서에서 제시하고 있는 association에 대한 기본 개념을 살펴보자.
+
+#### Source 그리고 Target
+
+서로 연관 지을 두 모델이 존재하고, 각 모델은 source와 target의 관계를 가지게 된다. 앞서 살펴본 네가지 종류의 association은 사실 메서드이기도 하며, 이 메서드를 호출하는 모델이 source, 인자로 전달되는 모델이 target이 된다. 
+
+> Source.hasOne(Target)
+
+#### Foreign Keys
+
+Sequelize에서 모델 간에 association을 생성하면, 제약을 가진 외래 참조 키가 자동으로 생성된다. 기본적으로 외래키의 이름은 source의 id를 참조하여 sourceId와 같이 생성된다. 만일 source에 특정 데이터가 지워지면 그 데이터를 참조하고 있는 target 데이터의 외래 참조 키는 기본적으로 NULL로 업데이트 된다. 이 기본 설정은 association 메서드를 호출할 때 onUpdate나 onDelete 옵션을 부여함으로써 변경할 수 있다. 타당성 옵션은 RESTRICT, CASCADE, NO ACTION, SET DEFAULT, SET NULL이 있다.
+
+앞서 말한 것 처럼 1:1 그리고 1:m association에서 데이터 삭제에 대한 기본 설정은 SET NULL이며, 업데이트는 CACADE이다. 이와 다르게 n:m의 관계에서 기본 설정은 CASCADE이다. 이것이 의미하는 것은, n:m association에서 한쪽의 행을 지우거나 업데이트하면 그 행을 참조하고 있는 결합 테이블의 모든 행이 업데이트 되거나 삭제 된다.
+
