@@ -2,7 +2,7 @@
 
 클래스는 데이터 형식의 템플릿이다.
 
-클래스를 만들고 클래스의 바디를 비워놓으면 에러가 발생한다. 따라서 의도적으로 바디를 비워놓았음을 의미하는 pass를 표시해야한다.
+클래스를 만들고 클래스의 바디를 비워놓으면 에러가 발생한다. (클래스가 아니라 함수도 마찬가지인 것 같다.) 따라서 의도적으로 바디를 비워놓았음을 의미하는 pass를 표시해야한다.
 
 ```python
 class MyFirstClass: # 바디가 비어있다는 에러가 발생한다.
@@ -221,3 +221,42 @@ dir(temp_list)
 ```
 
 위의 예시를 통해서 temp_list가 list 클래스의 인스턴스임을 알 수 있고, dir()메서드를 사용해서 dunder 속성들과 일반적인 list 메서드 목록을 확인할 수 있다.
+
+### 문자열로 표현하기
+
+디버깅을 하기 위해서 필요한 정보를 출력하는 것은 중요한 일인데, 파이썬에서 객체를 출력해보면 영 좋지 않은 정보를 볼 수 있을 것이다.
+
+```python
+class Musician():
+  def __init__(self, name):
+    self.name = name
+
+queen = Musician("Queen")
+print(queen)
+# prints "<__main__.Musician object at 0x105d7c990>"
+```
+
+queen 인스턴스를 print() 메서드로 출력해보면 요상한 문자열에 Musician 객체가 존재한다고 알려준다. 0x105d7c990은 메모리 주소를 의미하며 해당 주소에 객체가 존재한다는 의미가 될 것이다.
+
+메모리 주소를 알려주는 것도 좋겠지만, 디버깅 하는데는 별 소용이 없다. 아무래도 알아보기 쉽게 바꾸는 것이 디버깅하기에는 좋을 것 같다.
+
+앞서 dunder 메서드의 의미와 dunder 메서드 중 하나인 \__init__에 대해서 살펴보았다.
+
+이제 또 다른 메서드 \__repr__ 에 대해서 알아보자. 이 메서드를 사용하면 파이썬에게 클래스를 문자열로 표현해달라고 요청할 수 있다. 무슨 말인지 잘 모르겠으니 일단 사용해보고 위의 코드와 비교해보자.
+
+\__repr__는 오직 self만을 파라미터로 가지며 문자열을 반환한다.
+
+```python
+class Musician():
+  def __init__(self, name):
+    self.name = name
+    
+	def __repr__(self):
+    return self.name
+  
+queen = Musician("Queen")
+print(queen)
+# prints "Queen"
+```
+
+앞서 살펴본 코드와는 다르게 print()메서드가 Queen이라는 문자열을 반환하고 있는 것을 확인할 수 있다.  
