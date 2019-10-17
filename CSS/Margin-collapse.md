@@ -42,4 +42,4 @@ padding은 엘리먼트 border 안쪽에 추가 되는 공간을 의미하며, m
 
 위에서 설명한 내용을 도식화하면 아래의 그림과 같습니다.
 
-![https://github.com/ujeon/TIL/blob/master/src/image/CSS/vertical%20margins%20collapse.png](https://github.com/ujeon/TIL/blob/master/src/image/CSS/vertical margins collapse.png)
+![https://github.com/ujeon/TIL/blob/master/src/image/CSS/vertical%20margins%20collapse.png](https://github.com/ujeon/TIL/blob/master/src/image/CSS/vertical%20margins%20collapse.png)
