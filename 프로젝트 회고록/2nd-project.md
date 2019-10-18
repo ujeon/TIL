@@ -22,13 +22,13 @@
 
 ## 서비스 소개
 
-<img src="/Users/ujeon/Dropbox/coding/TIL/src/image/Screenshot_1571140050.png" alt="로그인 화면" style="zoom:20%;" />
+![로그인 페이지](https://github.com/ujeon/TIL/blob/master/src/image/secondhand-screenshot/Screenshot_1571140050.png)
 
 로그인 페이지에서는 로그인과 회원가입으로 이동할 수 있는 버튼이 있다.
 
 </br>
 
-<img src="/Users/ujeon/Dropbox/coding/TIL/src/image/Screenshot_1571140056.png" alt="회원가입 페이지" style="zoom:20%;" />
+![회원가입 페이지](https://github.com/ujeon/TIL/blob/master/src/image/secondhand-screenshot/Screenshot_1571140056.png)
 
 회원가입 페이지에서 사용자가 기입란을 채우지 않으면 빨간색으로 기입을 하게끔 유도하는 메세지를 렌더링 하였다.  사용자가 어느 기입란을 비웠는지에 따라 에러메세지를 달리 렌더링 하도록 만들었는데, 작업을 하면서 에러 처리에도 나름 라우팅(?)이 필요하다고 생각을 하게 되었다.  예를 들어, email 만 기입하지 않았으면 그 부분만 에러를 표시 하고, email, password를 비워두었으면 둘 다 에러를 표시하도록 말이다. 
 
@@ -36,31 +36,31 @@
 
 </br>
 
-<img src="/Users/ujeon/Dropbox/coding/TIL/src/image/Screenshot_1571140092.png" alt="홈 페이지" style="zoom:20%;" />
+![홈 페이지](https://github.com/ujeon/TIL/blob/master/src/image/secondhand-screenshot/Screenshot_1571140092.png)
 
 로그인을 하면 처음으로 마주하는 화면이다. 유모차 평균 가격을 그래프로 표시하고, 유모차 브랜드와 모델을 선택하여 검색을 할 수 있게 만들었다.
 
 </br>
 
-<img src="/Users/ujeon/Dropbox/coding/TIL/src/image/Screenshot_1571140117.png" alt="결과 페이지" style="zoom:20%;" />
+![결과 페이지](https://github.com/ujeon/TIL/blob/master/src/image/secondhand-screenshot/Screenshot_1571140117.png)
 
 앞서 본 페이지에서 브랜드와 모델을 검색하면 나오는 결과 페이지이다. 해당 모델의 최저가, 최고가, 평균가 정보를 보여주며, 아래에는 게시글 검색 결과가 렌더링 된다.
 
 </br>
 
-<img src="/Users/ujeon/Dropbox/coding/TIL/src/image/Screenshot_1571140130.png" alt="검색 페이지" style="zoom:20%;" />
+![검색 페이지](https://github.com/ujeon/TIL/blob/master/src/image/secondhand-screenshot/Screenshot_1571140130.png)
 
 사용자가 원하는 가격 범위를 설정하고 브랜드와 모델을 선택하면 해당 가격 범위에 속하는 모델의 리스트가 렌더링 된다. 사진에는 없지만 검색 버튼 바로 밑에 결과가 렌더링 된다.
 
 </br>
 
-<img src="/Users/ujeon/Dropbox/coding/TIL/src/image/Screenshot_1571140134.png" alt="관심 상품 페이지" style="zoom:20%;" />
+![페이버릿 페이지](https://github.com/ujeon/TIL/blob/master/src/image/secondhand-screenshot/Screenshot_1571140134.png)
 
-사용자가 결과 페이지에서 ❤️버튼을 클릭하면 이 페이지에 표시 된다.
+사용자가 결과 페이지에서 ❤️버튼을 클릭하면 관심 상품 페이지에 표시 된다.
 
 </br>
 
-<img src="/Users/ujeon/Dropbox/coding/TIL/src/image/Screenshot_1571140138.png" alt="마이 페이지" style="zoom:20%;" />
+![마이 페이지](https://github.com/ujeon/TIL/blob/master/src/image/secondhand-screenshot/Screenshot_1571140138.png)
 
 사용자 정보를 표시하며 만든 사람 볼 수 있는 크레딧 버튼과 로그아웃 버튼이 존재한다.
 
